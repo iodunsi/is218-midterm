@@ -64,20 +64,19 @@ class App:
     def start(self):
         '''Start function to initiate'''
         logging.info("Application started. Press Enter without typing anything to exit.")
-       # while True:
-        #    try:
-         #       user_input = input(">>> ").strip()
-         #       if user_input == '':
-         #           logging.info("Application exit.")
-          #          break
-           #     parts = user_input.split()
-            #    command_name = parts[0]
-             #   args = parts[1:]
-              #  self.command_handler.execute_command(command_name, *args)
-            #except KeyError:
-             #   logging.error(f"Unknown command: {user_input}")
-            #except Exception as e:
-             #   logging.error(f"Error executing command: {e}")
+        while True:
+            try:
+                user_input = input(">>> ").strip()
+                if user_input == '':
+                    break
+                parts = user_input.split()
+                command_name = parts[0]
+                args = parts[1:]
+                self.command_handler.execute_command(command_name, *args)
+            except KeyError:
+                print(f"Unknown command: {user_input}")
+            except Exception as e:
+                print(f"Error executing command: {e}")
 
     def get_environment_variable(self, env_var: str = 'ENVIRONMENT'):
         return self.settings.get(env_var, None)
