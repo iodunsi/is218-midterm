@@ -1,8 +1,11 @@
 from app.commands import Command
 
 class AddCommand(Command):
-    '''Adding command'''
+    """Addition command"""
     def execute(self, *args):
-        a,b=map(float,args)
-        result = a + b 
-        print(f"Result: {result}")
+        try:
+            numbers = list(map(float, args))
+            result = sum(numbers)
+            print(f"Result: {result}")
+        except ValueError:
+            print("Error: Invalid input. Please enter numbers only.")
