@@ -1,6 +1,6 @@
 """This file will test application implementation"""
 import logging
-#import pytest
+#import pandas as pd
 from app import App
 
 # Configure logging for tests
@@ -57,4 +57,5 @@ def test_app_divide_by_zero_command(capfd):
     app.command_handler.execute_command("divide", 8, 0)
 
     out, _ = capfd.readouterr()
-    assert "Error: Division by zero" in out
+    assert "Error: Invalid input. Please enter two numbers and the divisor must not be zero." in out
+    

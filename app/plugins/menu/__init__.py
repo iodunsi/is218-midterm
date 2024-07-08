@@ -9,3 +9,6 @@ class MenuCommand(Command):
         print("- multiply")
         print("- divide")
         print("- menu")
+        print("- show_history")
+        print("- clear_history")
+        
