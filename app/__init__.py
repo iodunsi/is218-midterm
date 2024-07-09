@@ -65,7 +65,7 @@ class App:
 
     def start(self):
         '''Start function to initiate'''
-        logging.info("Application started. Press Enter without typing anything to exit.")
+        logging.info("Application started. Press Enter without typing anything to exit. Type menu to see a list of commands.")
         while True:
             try:
                 user_input = input(">>> ").strip()
@@ -76,7 +76,7 @@ class App:
                 command_name = parts[0]
                 args = parts[1:]
                 
-                # Handle history-related commands directly
+                
                 if command_name == 'load_history':
                     self.load_history(*args)
                 elif command_name == 'save_history':
