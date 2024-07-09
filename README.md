@@ -1,5 +1,7 @@
 # IS 218 Midterm
 
+ ## [Instructional Video Displaying App Functionality](https://www.loom.com/share/163bddeb0d114eebb1051dc55d7ca4a8?sid=d8b3433a-eed0-46d8-8690-c933a6f6d694)
+
 Design Patterns:
 
 
@@ -28,4 +30,4 @@ The remaining examples of implementations of this design pattern are found withi
 
  **Logging**
 
- Logging is used to easily document errors for debug purposes. Configuration for logging is located within the [app/__init__.py file](https://github.com/iodunsi/is218-midterm/blob/master/app/__init__.py) through using Python's dictionary, which utilizes "key:value" pairs.
+ Logging is used to easily document errors for debug purposes. Within the context of this project, it is also used to provide initial instructions for the user, and handle error handling such as non zero numbers or non commands. Configuration for logging is located within the [app/__init__.py file](https://github.com/iodunsi/is218-midterm/blob/master/app/__init__.py) 
